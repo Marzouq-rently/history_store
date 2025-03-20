@@ -2,6 +2,7 @@
 
 module Types
   class QueryType < Types::BaseObject
+    field :events, resolver: Queries::Events
     field :node, Types::NodeType, null: true, description: "Fetches an object given its ID." do
       argument :id, ID, required: true, description: "ID of the object."
     end
